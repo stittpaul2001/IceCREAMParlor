@@ -12,147 +12,158 @@
 </head>
 
 <body>
-  <div class="conatiner-fluid">
-    <div class="row justify-content-around">
-      <div class="col-md-4 text-center">
-        <table class="table table-strpped-columns">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Quantity</th>
-              <th scope="col">Each</th>
-              <th scope="col">Total</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td class="fw-bold">Total</td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td></td>
-              <td></td>
-              <td>
-                <button class="btn btn-outline-warning btn-primary btn-rounded">Pay</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+  <main>
+
+    <div class="conatiner-fluid">
+      <div class="row justify-content-around">
+        <div class="col-md-4">
+          <div class="row card-table fw-bold fs-2 justify-content-around">
+            <div class="col-md-6 d-flex text-center">
+              <p>Name</p>
+              <p>Quantity</p>
+              <p>Each</p>
+              <p>Total</p>
+            </div>
+            <div class="row justify-space-between align-content-center">
+              <div class="col-md-12">
+                <ul class="list-group">
+                  <li class="list-group-item row">An item</li>
+                  <li class="list-group-item row">A second item</li>
+                  <li class="list-group-item row">A third item</li>
+                  <li class="list-group-item row">A fourth item</li>
+                  <li class="list-group-item row">And a fifth one</li>
+                </ul>
+              </div>
+            </div>
+            <div class="text-end">
+              <button class="btn btn-small btn-outline-warning btn-primary btn-rounded table-btn text-end">Pay</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-7">
+          <div class="row">
+            <h1 class="fw-bold">Toppings</h1>
+            <hr>
+            <div class="col-md-4">
+              <div class="card">
+                <div class=" card-body fs-2 fw-bold text-center">Sprinkles</div>
+                <img class="card-image img-fluid" src="spirnkles.avif" alt="image of cone with sprinkles">
+                <p class="fw-bold fs-4 text-end p-2">$0.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 fw-bold text-center">Chocloate Chips</div>
+                <img class="card-image img-fluid" src="chocolatechips.avif" alt="image of chocolate chips">
+                <p class="fw-bold fs-4 p-2 text-end">$0.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i> Add
+                    to Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 text-center fw-bold">Cookie Chunks</div>
+                <img class="card-image img-fluid" src="cookiechunk.avif" alt="image of cookie-chunks">
+                <p class="fw-bold fs-4 text-end p-2">$0.50</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <h1 class="fw-bold">Vessels</h1>
+            <hr>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 text-center fw-bold">Waffle Cone</div>
+                <img class="card-image img-fluid" src="wafflecone.avif" alt="image of a waffle cone">
+                <p class="fw-bold fs-4 text-end p-2">$1.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class=" card-body fs-2 text-center fw-bold">Sugar Cone</div>
+                <img class="card-image img-fluid" src="Sugarcone.avif" alt="image of a Sugar cone">
+                <p class="fw-bold fs-4 text-end p-2">$1.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 text-center fw-bold">Cup</div>
+                <img class="card-image img-fluid" src="cup.avif" alt="image of an ice cream cup">
+                <p class="fw-bold text-end fs-4 p-2">$1.50</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center align-content-center">
+            <h1 class="fw-bold">Ice Cream</h1>
+            <hr>
+            <div class="col-md-4">
+              <div class="card">
+                <div class=" card-body fs-2 text-center fw-bold">Vanilla</div>
+                <img class="card-image img-fluid" src="vanillaicecream.avif" alt="image of vanilla ice cream">
+                <p class="fw-bold text-end fs-4 p-2">$1.00</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 text-center fw-bold">Strawberry</div>
+                <img class="card-image img-fluid" src="strawberryicecream.avif" alt="image of strawberry ice cream">
+                <p class="fw-bold fs-4 text-end p-2">$1.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body fs-2 text-center fw-bold">Cookie Dough</div>
+                <img class="card-image img-fluid" src="cookiedough.avif" alt="image of cookiedough ice cream">
+                <p class="fw-bold fs-4 text-end p-2">$1.25</p>
+                <div class="card-footer text-end">
+                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                    to
+                    Order</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-md-7">
-        <div class="row">
-          <h1>Toppings</h1>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="spirnkles.avif" alt="image of cone with sprinkles">
-              <div class=" card-body fs-5">Sprinkles</div>
-              <p class="fw-bold">$0.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="chocolatechips.avif" alt="image of chocolate chips">
-              <div class=" card-body fs-5">Chocloate Chips</div>
-              <p class="fw-bold">$0.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="cookiechunk.avif" alt="image of cookie-chunks">
-              <div class=" card-body fs-5">Cookie Chunks</div>
-              <p class="fw-bold">$0.50</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <h1>Vessels</h1>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="wafflecone.avif" alt="image of a waffle cone">
-              <div class=" card-body fs-5">Waffle Cone</div>
-              <p class="fw-bold">$1.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="Sugarcone.avif" alt="image of a Sugar cone">
-              <div class=" card-body fs-5">Sugar Cone</div>
-              <p class="fw-bold">$1.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="cup.avif" alt="image of an ice cream cup">
-              <div class=" card-body fs-5">Cup</div>
-              <p class="fw-bold">$1.50</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center align-content-center">
-          <h1>Ice Cream</h1>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="vanillaicecream.avif" alt="image of vanilla ice cream">
-              <div class=" card-body fs-5">Vanilla </div>
-              <p class="fw-bold">$1.00</p>
-              <div class="card-footer text-end">
-                <button onclick="" class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <div class="card-header">
-                <img class="card-image" src="strawberryicecream.avif" alt="image of strawberry ice cream">
-              </div>
-              <div class=" card-body fs-5">Strawberry </div>
-              <p class="fw-bold">$1.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card">
-              <img class="card-image" src="cookiedough.avif" alt="image of cookiedough ice cream">
-              <div class=" card-body fs-5">Cookie Dough </div>
-              <p class="fw-bold">$1.25</p>
-              <div class="card-footer text-end">
-                <button class="btn btn-rounded btn-small btn-primary" type="submit">Add to Order</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </main>
 
   <script src="app.js">c</script>
 </body>
