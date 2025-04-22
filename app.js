@@ -66,12 +66,27 @@ const toppings = [
 ]
 
 
-function OrderIceCream() {
-
+function addIceCream() {
+  iceCreamFlavors[0].quantity += 1
+  console.log('added icecream', iceCreamFlavors[0])
 
 }
 
+function addToppings() {
+  toppings[0].quantity += 1
+  console.log('added toppings', toppings[0])
+
+}
+
+function addVessels() {
+  vessels[0].quantity += 1
+  console.log('adding vessels', vessels[0])
+}
+
+
+
 function orderVanilla() {
+  iceCreamFlavors
   console.log('ordering vanilla, not samonilla')
 
 }

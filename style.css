@@ -1,16 +1,17 @@
 body {
-  background-color: rgb(213, 193, 148);
+  background-color: rgb(228, 213, 176);
 }
 
 .card {
   border: solid;
   border-radius: 2em;
   border-color: rgb(7, 55, 55);
-  min-height: 100%
+  background-color: rgb(56, 173, 173);
+  height: auto;
 }
 
 .card-image {
-  height: 40vh;
+  height: 49vh;
   width: 100%;
   justify-items: center;
   align-items: center;
@@ -23,8 +24,8 @@ body {
 
 .card-table {
   display: flex;
-  min-height: 50%;
-  background-color: antiquewhite;
+  min-height: 60vh;
+  background-color: white;
   margin-top: 2rem;
   border: solid;
   border-color: rgb(7, 55, 55);

@@ -9,34 +9,36 @@
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="style.css">
+  <!-- <script src="app.js" defer></script> -->
 </head>
 
 <body>
   <main>
-
     <div class="conatiner-fluid">
       <div class="row justify-content-around">
         <div class="col-md-4">
-          <div class="row card-table fw-bold fs-2 justify-content-around">
-            <div class="col-md-6 d-flex text-center">
-              <p>Name</p>
-              <p>Quantity</p>
-              <p>Each</p>
-              <p>Total</p>
+          <div class="row card-table fw-bold fs-2 align-items-center justify-space-between p-4">Order
+            <div class="col-md-12 text-center d-flex">
+              <div class="col-md-3">Name</div>
+              <div class="col-md-3">Quantity</div>
+              <div class="col-md-3">Each</div>
+              <div class="col-md-3">Total</div>
+              <hr>
             </div>
             <div class="row justify-space-between align-content-center">
-              <div class="col-md-12">
+              <div class="col-md-12 align-items-center">
                 <ul class="list-group">
-                  <li class="list-group-item row">An item</li>
-                  <li class="list-group-item row">A second item</li>
-                  <li class="list-group-item row">A third item</li>
-                  <li class="list-group-item row">A fourth item</li>
-                  <li class="list-group-item row">And a fifth one</li>
+                  <li class="list-group-item row">1</li>
+                  <li class="list-group-item row">2</li>
+                  <li class="list-group-item row">3</li>
+                  <li class="list-group-item row">4</li>
+                  <li class="list-group-item row">5</li>
                 </ul>
               </div>
             </div>
             <div class="text-end">
-              <button class="btn btn-small btn-outline-warning btn-primary btn-rounded table-btn text-end">Pay</button>
+              <p>Total:</p>
+              <button class="btn btn-outline-primary btn-warning btn-rounded table-btn text-end">Pay</button>
             </div>
           </div>
         </div>
@@ -165,7 +167,7 @@
       </div>
   </main>
 
-  <script src="app.js">c</script>
+  <script src="app.js" defer></script>
 </body>
 
 </html>
