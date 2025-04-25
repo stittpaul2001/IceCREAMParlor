@@ -1,13 +1,12 @@
 
 
-const iceCreamFlavors = [
+const iceCreamMenu = [
   {
     name: 'Cookie Dough',
     price: 1.25,
     quantity: 0,
     type: 'scoop'
   },
-
   {
     name: 'Vanilla',
     price: 1,
@@ -20,10 +19,6 @@ const iceCreamFlavors = [
     quantity: 0,
     type: 'scoop'
   },
-]
-
-
-const vessels = [
   {
     Name: 'Waffle Cone',
     price: 1.25,
@@ -41,10 +36,7 @@ const vessels = [
     price: 1.50,
     quantity: 0,
     type: 'vessel'
-  }
-]
-
-const toppings = [
+  },
   {
     name: 'Sprinkles',
     price: 0.25,
@@ -65,28 +57,59 @@ const toppings = [
   }
 ]
 
+function OrderVanilla() {
+  iceCreamMenu[1].quantity += 1
+  console.log('ordering vanilla and not salmonella', iceCreamMenu[1])
+}
 
-function addIceCream() {
-  iceCreamFlavors[0].quantity += 1
-  console.log('added icecream', iceCreamFlavors[0])
+function OrderWaffleCone() {
+  iceCreamMenu[3].quantity += 1
+  console.log('ordering the waffle', iceCreamMenu[3])
 
 }
 
-function addToppings() {
-  toppings[0].quantity += 1
-  console.log('added toppings', toppings[0])
-
-}
-
-function addVessels() {
-  vessels[0].quantity += 1
-  console.log('adding vessels', vessels[0])
+function OrderSprinkles() {
+  iceCreamMenu[6].quantity += 1
+  console.log('ordering Sprinkles', iceCreamMenu[6])
 }
 
 
+function orderItem(itemName) {
+  iceCreamMenu[0].quantity += 1
+  console.log(itemName)
+}
 
-function orderVanilla() {
-  iceCreamFlavors
-  console.log('ordering vanilla, not samonilla')
+
+
+
+function OrderIcecream(itemName) {
+  const OrderIcecream = iceCreamMenu.find(icecream => icecream.Name)
+  OrderIcecream.quantity++
+  console.log(itemName)
+  drawOrder()
+}
+
+function drawTopping() {
+  const itemName = iceCreamMenu.find(topping => topping.name)
+  itemName.quantity++
+  drawOrder()
+}
+
+function drawVessel() {
+  const OrderVessel = iceCreamMenu.find(vessel => vessel.Name)
+  OrderVessel.quantity++
+  drawOrder()
+}
+
+function drawOrder() {
 
 }
+
+function totalOrder() {
+  let total = 0
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+
+  }
+}
+
+

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ice Cream Parlor</title>
+  li
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
@@ -19,21 +20,41 @@
         <div class="col-md-4">
           <div class="row card-table fw-bold fs-2 align-items-center justify-space-between p-4">Order
             <div class="col-md-12 text-center d-flex">
-              <div class="col-md-3">Name</div>
-              <div class="col-md-3">Quantity</div>
-              <div class="col-md-3">Each</div>
-              <div class="col-md-3">Total</div>
-              <hr>
-            </div>
-            <div class="row justify-space-between align-content-center">
-              <div class="col-md-12 align-items-center">
-                <ul class="list-group">
-                  <li class="list-group-item row">1</li>
-                  <li class="list-group-item row">2</li>
-                  <li class="list-group-item row">3</li>
-                  <li class="list-group-item row">4</li>
-                  <li class="list-group-item row">5</li>
-                </ul>
+              <div class="col-md-12 align-items-center " id="">
+                <div class=" table-responsive-lg">
+                  <table class="table table-responsive-lg">
+                    <thead>
+                      <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col"> Each</th>
+                        <th scope="col">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="text-start">
+                        <td scope="row">1</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr class="text-start">
+                        <td scope="row">2</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr class="text-start">
+                        <td scope="row">3</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                      <tr class="text-start">
+                        <td scope="row">4</td>
+                        <td></td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div class="text-end">
@@ -53,7 +74,8 @@
                 <img class="card-image img-fluid" src="spirnkles.avif" alt="image of cone with sprinkles">
                 <p class="fw-bold fs-4 text-end p-2">$0.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderSprinkles('Sprinkles')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -65,7 +87,8 @@
                 <img class="card-image img-fluid" src="chocolatechips.avif" alt="image of chocolate chips">
                 <p class="fw-bold fs-4 p-2 text-end">$0.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i> Add
+                  <button onclick="orderItem('Chocloate Chips')" class="btn btn-rounded btn-small btn-primary"
+                    type="submit"><i class="mdi mdi-plus"></i> Add
                     to Order</button>
                 </div>
               </div>
@@ -76,7 +99,8 @@
                 <img class="card-image img-fluid" src="cookiechunk.avif" alt="image of cookie-chunks">
                 <p class="fw-bold fs-4 text-end p-2">$0.50</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button onclick="orderItem('Cookie Chunks')" class="btn btn-rounded btn-small btn-primary"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -92,7 +116,8 @@
                 <img class="card-image img-fluid" src="wafflecone.avif" alt="image of a waffle cone">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderWaffleCone('Waffle Cone')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -104,7 +129,8 @@
                 <img class="card-image img-fluid" src="Sugarcone.avif" alt="image of a Sugar cone">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Sugar Cone')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -116,7 +142,8 @@
                 <img class="card-image img-fluid" src="cup.avif" alt="image of an ice cream cup">
                 <p class="fw-bold text-end fs-4 p-2">$1.50</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Cup')" type="submit"><i
+                      class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -132,7 +159,8 @@
                 <img class="card-image img-fluid" src="vanillaicecream.avif" alt="image of vanilla ice cream">
                 <p class="fw-bold text-end fs-4 p-2">$1.00</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderVanilla('vanilla')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -144,7 +172,8 @@
                 <img class="card-image img-fluid" src="strawberryicecream.avif" alt="image of strawberry ice cream">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderIcecream('strawberry')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -156,7 +185,8 @@
                 <img class="card-image img-fluid" src="cookiedough.avif" alt="image of cookiedough ice cream">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" type="submit"><i class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Cookie Dough')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
