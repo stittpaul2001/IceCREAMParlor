@@ -31,24 +31,11 @@
                         <th scope="col">Total</th>
                       </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="order list">
                       <tr class="text-start">
                         <td scope="row">1</td>
                         <td></td>
                         <td></td>
-                      </tr>
-                      <tr class="text-start">
-                        <td scope="row">2</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr class="text-start">
-                        <td scope="row">3</td>
-                        <td></td>
-                        <td></td>
-                      </tr>
-                      <tr class="text-start">
-                        <td scope="row">4</td>
                         <td></td>
                         <td></td>
                       </tr>
@@ -58,8 +45,9 @@
               </div>
             </div>
             <div class="text-end">
-              <p>Total:</p>
-              <button class="btn btn-outline-primary btn-warning btn-rounded table-btn text-end">Pay</button>
+              <p class="fw-bold" id="Order-Total">Total:$0.00</p>
+              <button class="btn btn-outline-primary btn-warning btn-rounded table-btn text-end"
+                onclick="CheckOut()">Pay</button>
             </div>
           </div>
         </div>
@@ -74,7 +62,7 @@
                 <img class="card-image img-fluid" src="spirnkles.avif" alt="image of cone with sprinkles">
                 <p class="fw-bold fs-4 text-end p-2">$0.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderSprinkles('Sprinkles')"
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addToppingByName('Sprinkles')"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
@@ -87,7 +75,7 @@
                 <img class="card-image img-fluid" src="chocolatechips.avif" alt="image of chocolate chips">
                 <p class="fw-bold fs-4 p-2 text-end">$0.25</p>
                 <div class="card-footer text-end">
-                  <button onclick="orderItem('Chocloate Chips')" class="btn btn-rounded btn-small btn-primary"
+                  <button onclick="addToppingByName('Chocolate Chips')" class="btn btn-rounded btn-small btn-primary"
                     type="submit"><i class="mdi mdi-plus"></i> Add
                     to Order</button>
                 </div>
@@ -99,7 +87,7 @@
                 <img class="card-image img-fluid" src="cookiechunk.avif" alt="image of cookie-chunks">
                 <p class="fw-bold fs-4 text-end p-2">$0.50</p>
                 <div class="card-footer text-end">
-                  <button onclick="orderItem('Cookie Chunks')" class="btn btn-rounded btn-small btn-primary"
+                  <button onclick="addToppingByName('Cookie Chunks')" class="btn btn-rounded btn-small btn-primary"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
@@ -116,7 +104,7 @@
                 <img class="card-image img-fluid" src="wafflecone.avif" alt="image of a waffle cone">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderWaffleCone('Waffle Cone')"
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addVesselByName('Waffle Cone')"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
@@ -129,7 +117,7 @@
                 <img class="card-image img-fluid" src="Sugarcone.avif" alt="image of a Sugar cone">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Sugar Cone')"
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addVesselByName('Sugar Cone')"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
@@ -142,8 +130,8 @@
                 <img class="card-image img-fluid" src="cup.avif" alt="image of an ice cream cup">
                 <p class="fw-bold text-end fs-4 p-2">$1.50</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Cup')" type="submit"><i
-                      class="mdi mdi-plus"></i>Add
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addVesselByName('Cup')"
+                    type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
                 </div>
@@ -172,7 +160,7 @@
                 <img class="card-image img-fluid" src="strawberryicecream.avif" alt="image of strawberry ice cream">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="OrderIcecream('strawberry')"
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addIceCreamByName('Strawberry')"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>
@@ -185,7 +173,7 @@
                 <img class="card-image img-fluid" src="cookiedough.avif" alt="image of cookiedough ice cream">
                 <p class="fw-bold fs-4 text-end p-2">$1.25</p>
                 <div class="card-footer text-end">
-                  <button class="btn btn-rounded btn-small btn-primary" onclick="orderItem('Cookie Dough')"
+                  <button class="btn btn-rounded btn-small btn-primary" onclick="addIceCreamByName('Cookie Dough')"
                     type="submit"><i class="mdi mdi-plus"></i>Add
                     to
                     Order</button>

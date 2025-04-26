@@ -20,19 +20,19 @@ const iceCreamMenu = [
     type: 'scoop'
   },
   {
-    Name: 'Waffle Cone',
+    name: 'Waffle Cone',
     price: 1.25,
     quantity: 0,
     type: 'vessel'
   },
   {
-    Name: 'Sugar Cone',
+    name: 'Sugar Cone',
     price: 1.25,
     quantity: 0,
     type: 'vessel'
   },
   {
-    Name: 'Cup',
+    name: 'Cup',
     price: 1.50,
     quantity: 0,
     type: 'vessel'
@@ -79,37 +79,80 @@ function orderItem(itemName) {
   console.log(itemName)
 }
 
-
-
-
-function OrderIcecream(itemName) {
-  const OrderIcecream = iceCreamMenu.find(icecream => icecream.Name)
-  OrderIcecream.quantity++
-  console.log(itemName)
+function addIceCreamByName(icecreamname) {
+  console.log('addicecream', icecreamname)
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+    const itemName = iceCreamMenu[i]
+    if (icecreamname == itemName.name) {
+      itemName.quantity += 1
+      console.log('+', i, itemName)
+    }
+  }
   drawOrder()
 }
 
-function drawTopping() {
-  const itemName = iceCreamMenu.find(topping => topping.name)
-  itemName.quantity++
+function addToppingByName(toppingname) {
+  console.log('add topping', toppingname)
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+    const itemName = iceCreamMenu[i]
+    if (toppingname == itemName.name) {
+      itemName.quantity += 1
+      console.log('+', i, itemName)
+    }
+  }
+  drawOrder()
+}
+function addVesselByName(vesselname) {
+  console.log('add vessel', vesselname)
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+    const itemName = iceCreamMenu[i]
+    if (vesselname == itemName.name) {
+      itemName.quantity += 1
+      console.log('+', i, itemName)
+    }
+  }
   drawOrder()
 }
 
-function drawVessel() {
-  const OrderVessel = iceCreamMenu.find(vessel => vessel.Name)
-  OrderVessel.quantity++
-  drawOrder()
-}
+
 
 function drawOrder() {
+  const orderListElm = document.getElementById('order list')
+  const totalElm = document.getElementById('Order-Total')
 
+  let orderContent = ''
+
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+    const itemName = iceCreamMenu[i]
+    if (itemName.quantity > 0) {
+      console.log('${item.quantity}, ${item.name}, ${(item.price * item.quantity).toFixed(2)}')
+      orderContent += `<tr><td>${itemName.name}</td> <td>${itemName.quantity}</td><td>$${itemName.price}</td><td>$${itemName.price}</td><tr>`
+
+    }
+  }
+  orderListElm.innerHTML = orderContent
+  const orderTotal = OrderTotal();
+  totalElm.innerText = orderTotal.toFixed(2)
 }
 
-function totalOrder() {
+
+function OrderTotal() {
   let total = 0
   for (let i = 0; i < iceCreamMenu.length; i++) {
-
+    const itemName = iceCreamMenu[i]
+    total += itemName.price * itemName.quantity
   }
+  console.log('💵', total)
+  return total
 }
 
+
+function CheckOut() {
+  for (let i = 0; i < iceCreamMenu.length; i++) {
+    const itemName = iceCreamMenu[i]
+    itemName.quantity = 0
+  }
+  window.alert("🚀💥Enjoy your delectable goodies!")
+  drawOrder()
+}
 
